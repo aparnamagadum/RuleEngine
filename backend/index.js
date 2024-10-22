@@ -9,7 +9,7 @@ const uri=process.env.uri
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 app.use(cors({
-        origin:"http://localhost:5173"
+        origin:"https://ruleengine-1.onrender.com"
 }))
 mongoose.connect(uri)
         .then(()=>app.listen(port,()=>console.log(`server running on port ${port}`)))
