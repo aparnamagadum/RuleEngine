@@ -11,7 +11,7 @@ function App() {
   // Create Rule Handler
   const handleCreateRule = async () => {
     try {
-      const response = await axios.post('http://localhost:6969/api/create_rule', { ruleString });
+      const response = await axios.post('https://ruleengine-psgh.onrender.com/api/create_rule', { ruleString });
       console.log('AST:', response.data.ast);
       setAst(JSON.stringify(response.data.ast, null, 2)); // Set AST JSON
       alert('Rule created successfully');
@@ -24,7 +24,7 @@ function App() {
   // Combine Rules Handler
   const handleCombineRules = async () => {
     try {
-      const response = await axios.post('http://localhost:6969/api/combine_rules', { rules });
+      const response = await axios.post('https://ruleengine-psgh.onrender.com/api/combine_rules', { rules });
       console.log('Combined AST:', response.data.ast);
       setAst(JSON.stringify(response.data.ast, null, 2)); // Set combined AST
       alert('Rules combined successfully');
@@ -47,7 +47,7 @@ function App() {
         console.log('Parsed AST:', parsedAst);
         console.log('Parsed Data:', parsedData);
 
-        const response = await axios.post('http://localhost:6969/api/evaluate_rule', { ast: parsedAst, data: parsedData });
+        const response = await axios.post('https://ruleengine-psgh.onrender.com/api/evaluate_rule', { ast: parsedAst, data: parsedData });
         setEvaluationResult(response.data.result);
     } catch (error) {
         console.error('Error evaluating rule:', error);
