@@ -1,33 +1,31 @@
-/* App.css */
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
-  }
-  
-  h1 {
+}
+
+h1 {
     text-align: center;
     color: #333;
-  }
-  
-  h2 {
+}
+
+h2 {
     color: #555;
     margin-top: 20px;
-  }
-  
-  .container {
+}
+
+.container {
     max-width: 600px; /* Set a max width */
     margin: 0 auto; /* Center the container */
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  input[type="text"],
-  textarea {
+}
+
+input[type="text"],
+textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -35,13 +33,13 @@ body {
     border-radius: 4px;
     font-size: 14px;
     box-sizing: border-box; /* Ensure padding is included in the width */
-  }
-  
-  textarea {
+}
+
+textarea {
     resize: vertical; /* Allow vertical resizing only */
-  }
-  
-  button {
+}
+
+button {
     background-color: #007bff;
     color: white;
     border: none;
@@ -51,21 +49,53 @@ body {
     font-size: 16px;
     transition: background-color 0.3s;
     margin: 5px 0; /* Add margin for spacing */
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: #0056b3; /* Darken on hover */
-  }
-  
-  .evaluation-result {
+}
+
+.evaluation-result {
     margin-top: 20px;
     padding: 10px;
     background-color: #e7f3fe;
     border-left: 6px solid #2196F3; /* Add a blue left border */
-  }
-  
-  .evaluation-result h3 {
+}
+
+.evaluation-result h3 {
     margin: 0; /* Remove margin for the result heading */
-  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+    
+    h1 {
+        font-size: 24px; /* Smaller font size for heading */
+    }
+    
+    h2 {
+        font-size: 20px; /* Smaller font size for subheadings */
+    }
+    
+    button {
+        padding: 8px 12px; /* Smaller button padding */
+        font-size: 14px; /* Smaller button font size */
+    }
+}
+
+@media (max-width: 480px) {
+    input[type="text"],
+    textarea {
+        font-size: 12px; /* Smaller font size for inputs */
+    }
+    
+    button {
+        width: 100%; /* Full width buttons */
+    }
+}
+
   
   
